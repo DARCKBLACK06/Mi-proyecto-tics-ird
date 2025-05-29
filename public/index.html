@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="icon" href="../public/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="Mensaje-form">
+         <h1>Bienvenido</h1>
+        </div>
+        <form class="login-form">
+            <h2>Iniciar Sesion</h2>
+            <input type="email" placeholder="Correo electronico" required/>
+            <input type="password" placeholder="Contrasena" required/>
+            <button type="submit" >Entrar</button>
+        </form>
+    </div>
+    <button class="customize-btn" onclick="openModal()">
+  <i class="fas fa-paint-brush"></i> Personalizar
+ </button>
+
+<div id="customModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">
+      <i class="fas fa-times"></i>
+    </span>
+    <h2>Personaliza tu fondo</h2>
+    <input type="file" id="uploadInput" accept="image/*" onchange="uploadImage()" />
+    <!-- SOLO MUESTRA LOS CAMBIOS CLAVE -->
+<div class="background-gallery preset-images">
+  <!-- Ícono para subir -->
+  <label for="uploadInput" class="upload-icon">＋</label>
+  <input type="file" id="uploadInput" accept="image/*" onchange="uploadImage()" />
+  
+  <!-- Galería -->
+  <img src="img/wallpapers/fondo.jpg" onclick="setBackground('img/wallpapers/fondo.jpg')" />
+  <img src="img/wallpapers/fondo1.jpg" onclick="setBackground('img/wallpapers/fondo1.jpg')" />
+  <img src="img/wallpapers/fondo2.jpg" onclick="setBackground('img/wallpapers/fondo2.jpg')" />
+  <img src="img/wallpapers/fondo3.jpg" onclick="setBackground('img/wallpapers/fondo3.jpg')" />
+  <img src="img/wallpapers/fondo4.jpg" onclick="setBackground('img/wallpapers/fondo4.jpg')" />
+  <img src="img/wallpapers/fondo5.jpg" onclick="setBackground('img/wallpapers/fondo5.jpg')" />
+  <img src="img/wallpapers/fondo6.jpg" onclick="setBackground('img/wallpapers/fondo6.jpg')" />
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
+<script type="module" src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</html>

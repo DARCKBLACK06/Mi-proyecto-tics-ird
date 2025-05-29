@@ -1,0 +1,37 @@
+/mi-proyecto-iot/
+│
+├── 📁 public/                 # Archivos visibles desde la web (si usas Firebase Hosting)
+│   ├── index.html            # Página principal (Hola Mundo, Dashboard, etc.)
+│   ├── login.html            # Página de inicio de sesión
+│   ├── register.html         # Página de registro de usuarios
+│   ├── css/
+│   │   └── styles.css        # Estilos para las páginas web
+│   ├── js/
+│   │   ├── main.js           # Lógica principal del frontend
+│   │   ├── auth.js           # Lógica de autenticación con Firebase
+│   │   └── dashboard.js      # Lógica del dashboard con gráficas
+│   └── img/                  # Imágenes para la web
+│         └── wallpapers      # Imagenes de fondo para el login 
+│ 				├──fondo.jpg
+│ 				├──fondo1.jpg
+│ 				├──fondo2.jpg	
+│
+├── 📁 src/                    # Código fuente del backend (si usas funciones de Firebase)
+│   └── firebase-functions/
+│       └── index.js          # Funciones Cloud para manejar datos, seguridad, etc.
+│
+├── 📁 firmware/              # Código que irá en tu ESP32
+│   ├── main.ino              # Código Arduino/ESP32 para manejar sensores
+│   └── lib/                  # Librerías necesarias
+│
+├── 📁 data/                  # Archivos como .csv, .json o simulaciones
+│
+├── 📁 diagrams/              # Diagramas de flujo, esquemas, etc.
+│
+├── 📁 docs/                  # Documentación del proyecto (manual, instrucciones)
+│
+├── .firebaserc               # Configuración del proyecto Firebase
+├── firebase.json             # Config de Firebase Hosting y funciones
+├── package.json              # Dependencias del proyecto (si usas npm)
+├── README.md                 # Descripción general del proyecto
+└── .gitignore                # Archivos que no se suben a GitHub

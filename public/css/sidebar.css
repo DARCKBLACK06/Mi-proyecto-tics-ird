@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #004466;
+  color: white;
+  padding: 60px 20px 20px;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-header {
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+/* Toggle Menu Icon (☰) */
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+  color: #004466;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: left 0.3s ease;
+}
+
+.menu-icon.hidden {
+  left: 10px;
+}
+
+/* Ajusta posición cuando sidebar está abierto */
+.sidebar.open + .menu-icon {
+  left: 260px;
+}
+
+/* BOTONES DE MENÚ */
+.toggle-btn {
+  width: 100%;
+  padding: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.toggle-btn i {
+  transition: transform 0.3s ease;
+}
+
+/* SUBMENUS */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #035c72;
+  transition: max-height 0.4s ease;
+  border-radius: 5px;
+}
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.submenu li a:hover {
+  background-color: #047c92;
+}
+
+/* ROTATE ARROW */
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar.open + .menu-icon {
+    left: 15px;
+  }
+}
